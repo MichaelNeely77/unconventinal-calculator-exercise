@@ -1,3 +1,5 @@
 let currentResult = 0;
 
-alert("this works");
+currentResult = currentResult + 10;
+
+outputResult(currentResult, '');
