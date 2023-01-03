@@ -1,5 +1,6 @@
 const defaultResultValue = 0;
 let currentResult = defaultResultValue;
+let logEntries =[]; // starting with empty array because starting with new array. Uniinitialized does the same thing
 
 function getUserInput() {
     return parseInt(userInput.value);
@@ -15,7 +16,10 @@ function add() {
     const initialResult = currentResult;
     //currentResult = currentResult + enteredNumber;
     currentResult += enteredNumber;
+    // currentResult++;
     createWriteLog('+', initialResult, enteredNumber);
+    logEntries.push(enteredNumber);
+    console.log(logEntries[0]);
 }
 
 function subtract() {
@@ -23,6 +27,7 @@ function subtract() {
     const initialResult = currentResult;
     // currentResult = currentResult - enteredNumber;
     currentResult -= enteredNumber;
+    // currentResult--;
     createWriteLog('-', initialResult, enteredNumber);
 }
 
