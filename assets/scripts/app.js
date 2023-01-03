@@ -13,21 +13,24 @@ function createWriteLog(operator, resultBeforeCalc, calcNumber) {
 function add() {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
-    currentResult = currentResult + enteredNumber;
+    //currentResult = currentResult + enteredNumber;
+    currentResult += enteredNumber;
     createWriteLog('+', initialResult, enteredNumber);
 }
 
 function subtract() {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
-    currentResult = currentResult - enteredNumber;
+    // currentResult = currentResult - enteredNumber;
+    currentResult -= enteredNumber;
     createWriteLog('-', initialResult, enteredNumber);
 }
 
 function multiply() {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
-    currentResult = currentResult * enteredNumber;
+    // currentResult = currentResult * enteredNumber;
+    currentResult *= enteredNumber;
     createWriteLog('*', initialResult, enteredNumber);
 }
 
@@ -35,7 +38,8 @@ function multiply() {
 function divide() {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
-    currentResult = currentResult / enteredNumber;
+    // currentResult = currentResult / enteredNumber;
+    currentResult /= enteredNumber;
     createWriteLog('/', initialResult, enteredNumber);
 }
 
