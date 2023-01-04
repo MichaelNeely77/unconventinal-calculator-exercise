@@ -13,7 +13,7 @@ function createWriteLog(operator, resultBeforeCalc, calcNumber) {
 
 function writeToLog(
     operationIdentifier, 
-    preResult, 
+    prevResult, 
     operationNumber, 
     newResult) {
         const logEntry = {
