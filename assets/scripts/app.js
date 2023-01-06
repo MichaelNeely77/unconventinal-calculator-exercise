@@ -48,6 +48,15 @@ function calculateResult(calculationType) {
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
 }
 
+if(
+    calculationType !== 'ADD' &&
+    calculationType !== 'ASUBTRACT' &&
+    calculationType !== 'MULTIPLY' &&
+    calculationType !== 'DIVIDE'
+) {
+    return;
+}
+
 function add() {
    calculateResult('ADD');
 }
