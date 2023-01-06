@@ -27,6 +27,15 @@ function writeToLog(
         console.log(logEntries[0]);
 }
 
+if(
+    calculationType !== 'ADD' &&
+    calculationType !== 'ASUBTRACT' &&
+    calculationType !== 'MULTIPLY' &&
+    calculationType !== 'DIVIDE'
+) {
+    return;
+}
+
 function calculateResult(calculationType) {
     const enteredNumber = getUserInput();
     const initialResult = currentResult;
@@ -48,14 +57,7 @@ function calculateResult(calculationType) {
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
 }
 
-if(
-    calculationType !== 'ADD' &&
-    calculationType !== 'ASUBTRACT' &&
-    calculationType !== 'MULTIPLY' &&
-    calculationType !== 'DIVIDE'
-) {
-    return;
-}
+
 
 function add() {
    calculateResult('ADD');
@@ -79,6 +81,5 @@ addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', subtract);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', divide);
-
 
 
