@@ -29,7 +29,7 @@ function writeToLog(
 
 if(
     calculationType !== 'ADD' &&
-    calculationType !== 'ASUBTRACT' &&
+    calculationType !== 'SUBTRACT' &&
     calculationType !== 'MULTIPLY' &&
     calculationType !== 'DIVIDE'
 ) {
